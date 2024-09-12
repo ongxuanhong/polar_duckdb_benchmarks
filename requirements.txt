@@ -1,4 +1,5 @@
-polars==1.7.0
+polars==1.5.0
 duckdb==1.1.0
 pandas==2.2.2
 kaggle==1.6.17
+matplotlib==3.9.2

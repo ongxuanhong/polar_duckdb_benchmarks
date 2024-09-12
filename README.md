@@ -10,4 +10,9 @@ kaggle competitions download -c leash-BELKA
 
 # uncompress file
 unzip leash-BELKA.zip -d leash-BELKA
+
+# install packages
+conda create -n polar_duckdb_benchmarks
+conda activate polar_duckdb_benchmarks
+pip install -r requirements.txt 
 ```
