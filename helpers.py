@@ -1,11 +1,26 @@
 import os
 import matplotlib.pyplot as plt
 import psutil
+from memory_profiler import memory_usage
+
 
 # Helper function to get memory usage
 def get_memory_usage():
     process = psutil.Process(os.getpid())
     return process.memory_info().rss / (1024**2)  # Convert bytes to MB
+
+
+# Function to track memory usage and time for each benchmark
+def track_memory_and_time(benchmark_func, *args):
+    # Measure the memory usage during execution using memory profiler
+    mem_usage, results = memory_usage((benchmark_func, args), retval=True)
+
+    # Memory usage peak and elapsed time
+    peak_memory = max(mem_usage)
+    elapsed_time = results[0]  # Elapsed time is the first element in the results tuple
+    result = results[1]  # Actual result of the benchmark function
+
+    return elapsed_time, peak_memory, result
 
 
 def plot_results(df_output, title1, title2):

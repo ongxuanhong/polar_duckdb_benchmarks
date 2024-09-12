@@ -3,3 +3,4 @@ duckdb==1.1.0
 pandas==2.2.2
 kaggle==1.6.17
 matplotlib==3.9.2
+memory-profiler==0.61.0
