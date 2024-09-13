@@ -23,6 +23,13 @@ kaggle competitions download -c leash-BELKA
 # uncompress file
 unzip leash-BELKA.zip -d leash-BELKA
 
+# install libraries
+conda create -n polar_duckdb_benchmark python=3.10
+conda activate polar_duckdb_benchmark
+
+pip install -r requirements.txt
+conda install cuda --channel nvidia/label/cuda-11.8.0 -y
+conda install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia -y
 ```
 
 ## Performance Benchmarking of Polars vs DuckDB on BELKA Dataset
