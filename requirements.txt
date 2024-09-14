@@ -6,3 +6,5 @@ matplotlib==3.9.2
 memory-profiler==0.61.0
 deepchem==2.8.0
 rdkit==2024.3.5
+torch==2.4.1
+torchvision==0.19.1
