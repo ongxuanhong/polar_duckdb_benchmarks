@@ -28,6 +28,14 @@ conda create -n polar_duckdb_benchmark python=3.10
 conda activate polar_duckdb_benchmark
 
 pip install -r requirements.txt
+
+# for Deepchem (python=3.7)
+# conda install -c conda-forge deepchem
+# pip install --pre deepchem
+pip install deepchem==2.5.0.dev
+pip install --pre deepchem[torch]
+pip install --pre deepchem[tensorflow]
+pip install --pre deepchem[jax]
 conda install cuda --channel nvidia/label/cuda-11.8.0 -y
 conda install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia -y
 ```
