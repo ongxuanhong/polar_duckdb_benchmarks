@@ -1,3 +1,5 @@
 leash-BELKA/
 *.pyc
 *.zip
+.DS_Store
+.idea/
